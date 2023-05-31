@@ -1,0 +1,82 @@
+{
+  "data": {
+    "start": "conversation-0",
+
+    "conversation-0": {
+        "type": "npc_talk",
+        "npc_image": "idle",
+        "text": [
+            "Olá, meu nome é Gabriel!",
+            "Por motivos de privacidade, eu troquei a conversa original daqui, afinal de contas, era um presente para minha namorada!",
+            "Por isso, vou apenas comentar sobre o que eu fiz."
+        ],
+        "next": "conversation-0.1"
+    },
+    "conversation-0.1": {
+        "type": "npc_talk",
+        "npc_image": "excited",
+        "text": [
+            "Primeiro, toda essa conversa foi escrita manualmente em um JSON.",
+            "Funciona como uma lista ligada, onde um node contém informações do tipo, a minha imagem, o texto, e qual o próximo node."
+        ],
+        "next": "conversation-0.2"
+    },
+    "conversation-0.2": {
+        "type": "npc_talk",
+        "npc_image": "idle",
+        "text": [
+            "O objetivo era fazer uma brincadeira com minha namorada onde eu faria várias perguntas que só ela saberia responder, e só depois ela poderia criar uma conta.",
+            "Para evitar muita frustração, também criei um sistema de checkpoints, já que o JSON original tinha mais de 1000 linhas de diálogo..."
+        ],
+        "next": "conversation-0.3"
+    },
+    "conversation-0.3": {
+        "type": "npc_talk",
+        "npc_image": "idle",
+        "text": [
+            "O objetivo era fazer uma brincadeira com minha namorada onde eu faria várias perguntas que só ela saberia responder, e só depois ela poderia criar uma conta.",
+            "Para evitar muita frustração, também criei um sistema de checkpoints, já que o JSON original tinha mais de 1000 linhas de diálogo...",
+            "Para manter os estados salvos entre diferentes páginas, utilizei o redux-toolkit.",
+            "E finalmente, as minhas imagens foram geradas utilizando inteligência artificial."
+        ],
+        "next": "conversation-0.4"
+    },
+    
+    "conversation-0.4": {
+        "type": "npc_talk",
+        "npc_image": "question",
+        "text": [
+            "Enfim, o que você acha de criar uma conta?"
+        ],
+        "next": "conversation-0.5"
+    },
+    "conversation-0.5": {
+        "type": "player_answer",
+        "npc_image": "question",
+        "text": [
+          {
+            "answer": "Vou criar uma conta!",
+            "next": "good-ending"
+          },
+          {
+            "answer": "Quero testar o que acontece se eu falar não.",
+            "next": "bad-ending"
+          }
+        ]
+      },
+
+    
+    "bad-ending":
+    {
+      "type": "end_game",
+      "npc_image": "dead",
+      "info": "bad_ending"
+    },
+    "good-ending":
+    {
+      "type": "end_game",
+      "npc_image": "idle",
+      "info": "good_ending"
+    }
+  }
+}
