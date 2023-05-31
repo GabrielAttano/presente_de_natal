@@ -32,7 +32,6 @@ function MainScreen() {
     if (!conversation) return
 
     const { type: conversationType, text: conversationTexts, npc_image: npcImage } = conversation
-    console.log(conversationType, conversationTexts)
     
     switch(conversationType) {
       case conversationTypes.NpcTalk:
@@ -52,7 +51,6 @@ function MainScreen() {
         setType(conversationTypes.PlayerAnswer)
         break
       default:
-        console.log('default')
         break
     }
     setActiveText(0)
@@ -66,12 +64,10 @@ function MainScreen() {
 
   const handleEndGame = (info) => {
     if (info === 'bad_ending') {
-      console.log('bad ending')
       toast.error('Você não conseguiu me convencer... Que tal tentar de novo?')
       dispatch(setIsRobot(true))
     }
     if (info === 'good_ending') {
-      console.log('good ending')
       toast.success('Você respondeu todas as perguntas! Pode criar sua conta!')
       dispatch(setIsRobot(false))
     }
@@ -105,7 +101,6 @@ function MainScreen() {
         setActiveConversation(selectedAnswer['next'])
         break
       case conversationTypes.EndGame:
-        console.log('ending game')
         break
     }
   }

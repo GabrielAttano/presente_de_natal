@@ -30,23 +30,19 @@ function Login() {
   const handleSubmit = (e) => {
     if (!isAccountCreated) {
       toast.error('Você ainda não criou uma conta!')
-      console.log('Account not created yet.')
       return
     }
 
     if (email !== desiredEmail ) {
       toast.error('O email não confere com o que você usou para se registrar!')
-      console.log('Email doesnt match the one used when registering.')
       return
     }
 
     if (password !== desiredPassword) {
       toast.error('A senha não confere com a que você usou para se registrar!')
-      console.log('Password is wrong.')
       return
     }
     
-    console.log('Loggin in')
     toast.success(`Seja bem-vinda!`)
     dispatch(login())
     navigate('/')
