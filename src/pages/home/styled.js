@@ -17,8 +17,7 @@ export const body = styled.div`
     gap: 50px;
   }
 `
-
-export const backgroundImage = styled.div`
+export const heroSection = styled.div`
   background-image: url(${christmasBackground});
   width: 100%;
   height: 700px;
@@ -26,19 +25,35 @@ export const backgroundImage = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  gap: 40px;
+  
   background-position-x: 50%;
   background-position-y: 40%;
 `
 
-export const backgroundImage_text = styled.span`
+export const heroSection_text = styled.span`
   color: ${C.white};
   font-size: 60px;
   font-weight: 500;
   text-align: center;
   text-shadow: -2px 3px 8px rgba(0,0,0,0.47);
+
   @media (min-width: 992px) {
     font-size: 100px;
+  }
+`
+
+export const heroSection_button = styled.button`
+  font-size: 42px;
+  font-weight: 500;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 20px;
+  background-color: ${C.secondary};
+
+  &:focus,
+  &:hover {
+    background-color: ${C.secondaryDarker};
   }
 `
 
@@ -60,6 +75,11 @@ export const bodySection = styled.div`
 export const bodySection_img = styled.img`
   width: 100%;
   height: 100%;
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
 `
 
 export const hr = styled.hr`
