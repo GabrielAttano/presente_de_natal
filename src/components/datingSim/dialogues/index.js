@@ -10,5 +10,5 @@ export const conversationTypes = {
 }
 
 export const checkPoints = [
-  'conversation-0.4',
+  'conversation-0.3',
 ]
