@@ -54,14 +54,17 @@ function CreateAccount() {
     }
   }, [])
 
-  const handleSubmit = (e) => {
-
-    
+  const dispatchInfo = () => {
     dispatch(saveUsername(username))
     dispatch(saveFirstname(firstName))
     dispatch(saveLastname(lastName))
     dispatch(saveEmail(email))
-    dispatch(saveLastname(lastName))
+  }
+
+  const handleSubmit = (e) => {
+
+    
+    dispatchInfo()
 
     if (!isValidForm()) {
       e.preventDefault()
@@ -71,7 +74,6 @@ function CreateAccount() {
     if (isRobot) {
       e.preventDefault()
       toast.error('Você precisa confirmar que não é um robô!')
-      console.log('Must confirm that you arent a robot')
       return
     }
     
@@ -84,19 +86,15 @@ function CreateAccount() {
 
     toast.success('Conta criada com sucesso, basta fazer login!')
     navigate('/')
-    console.log('Account created, login')
   }
 
   const handleIsRobotClick = (e) => {
     e.preventDefault()
+    dispatchInfo()
 
     if (isRobot) {
-      
-      toast.info('Uma força mágica impede você de clicar nesse botão! Que tão investigar mais?')
-      console.log('A magical force prevents you from clicking this button!')
-      navigate('/visual-novel')
-    } else {
-      console.log('Você não é um robô!')
+        toast.info('Uma força mágica impede você de clicar nesse botão! Que tal investigar mais?')
+        navigate('/visual-novel')
     }
   }
     
@@ -122,7 +120,6 @@ function CreateAccount() {
 
     const normalizedFirstName = firstName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
     if (normalizedFirstName !== 'julia') {
-      console.log('First name must be "Julia" to proceed')
       toast.error('O nome não confere... Que tal tentar "Julia"?')
       return false
     }
