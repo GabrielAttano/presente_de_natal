@@ -158,11 +158,6 @@ function CreateAccount() {
 
   return (
     <S.body>
-
-      <S.backgroundImage >
-        <S.backgroundImage_text>Dê início a sua jornada.</S.backgroundImage_text>
-      </S.backgroundImage>
-
       <S.createAccount_container>
         <S.formWrapper>
           <S.form>
