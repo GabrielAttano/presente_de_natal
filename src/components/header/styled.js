@@ -46,9 +46,15 @@ export const link = styled.span`
 
 export const logo = styled.span`
   color: ${C.primary};
-  font-size: 45px;
+  font-size: 32px;
   text-decoration: inherit;
-  font-weight: 700;
+  font-weight: 600;
+
+  @media (min-width: 992px) {
+    display: block;
+    font-size: 45px;
+    font-weight: 700;
+  }
 `
 
 export const linkSeparator = styled.span`

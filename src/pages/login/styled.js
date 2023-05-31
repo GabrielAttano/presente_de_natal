@@ -10,7 +10,7 @@ export const body = styled.div`
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  height: 700px;
+  height: 100%;
   padding-top: 24px;
 
   @media (min-width: 992px) {
