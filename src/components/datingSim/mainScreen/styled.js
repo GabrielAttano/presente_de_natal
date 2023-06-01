@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import * as C from '../../../config/colors'
-import backgroundRestaurant from '../../../assets/images/scenarios/igor-rand-Cnfu7o_780g-unsplash.jpg'
+import backgroundRestaurant from '../../../assets/images/scenarios/wp7833513-anime-restaurant-wallpapers.png'
 
 export const screenContainer = styled.div`
   display: flex;
