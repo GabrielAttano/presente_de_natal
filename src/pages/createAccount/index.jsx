@@ -118,12 +118,6 @@ function CreateAccount() {
 
     if (firstName === '') return false
 
-    const normalizedFirstName = firstName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
-    if (normalizedFirstName !== 'julia') {
-      toast.error('O nome não confere... Que tal tentar "Julia"?')
-      return false
-    }
-
     return true
   }
 
