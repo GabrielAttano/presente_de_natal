@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { FaLinkedinIn, FaGithub, FaUser, FaHome } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaUser } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 import * as S from './styled'
