@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import * as C from '../../config/colors'
 
-import manInSnow from '../../assets/images/backgrounds/main-in-snow.jpg'
-
 export const body = styled.div`
   background-color: ${C.bodyBackground};
   display: flex;
@@ -16,26 +14,6 @@ export const body = styled.div`
     padding-top: 64px;
     padding-bottom: 64px;
     gap: 32px;
-  }
-`
-export const backgroundImage = styled.div`
-  background-image: url(${manInSnow});
-  width: 100%;
-  height: 500px;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 32px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 40%;
-  background-position-x: 50%;
-  
-  @media (min-width: 992px) {
-    padding-top: 80px;
-    height: 700px;
   }
 `
 export const backgroundImage_text = styled.span`
